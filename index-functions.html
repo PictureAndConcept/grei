@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Accordian Example">
+
+		<title>Accordian Example</title>
+		
+
+		<!-- external CSS link -->
+		
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
+	</head>
+
+	<header>
+		<div class="main">
+				<section>
+					
+					<!-- Class "cbp-spmenu-open" gets applied to menu -->
+					
+					<button id="showRightPush">Show/Hide Right Slide Menu</button>
+					
+				</section>
+				
+			</div>
+
+
+	</header>
+
+	<body class="cbp-spmenu-push">
+
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+			<h3>Menu</h3>
+
+			<a href="#">Celery seakale</a>
+			<a href="#">Dulse daikon</a>
+			<a href="#">Zucchini garlic</a>
+			<a href="#">Catsear azuki bean</a>
+			<a href="#">Dandelion bunya</a>
+			<a href="#">Rutabaga</a>
+		</nav>
+		
+		<section id="faq">
+			<dl class="accordion">
+  <dt><a href="javascript:void(0);">Panel 1</a></dt>
+  <dd>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</dd>
+
+  <dt><a href="javascript:void(0);">Panel 2</a></dt>
+  <dd>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</dd>
+
+  <dt><a href="javascript:void(0);">Panel 3</a></dt>
+  <dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</dd>
+</dl>​
+		</section>
+		
+		
+		<footer>
+			
+		</footer>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/classie.js"></script>
+		
+
+
+
+
+		<script>
+			var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+				/*menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+				menuTop = document.getElementById( 'cbp-spmenu-s3' ),
+				menuBottom = document.getElementById( 'cbp-spmenu-s4' ),
+				showLeft = document.getElementById( 'showLeft' ),
+				showRight = document.getElementById( 'showRight' ),
+				showTop = document.getElementById( 'showTop' ),
+				showBottom = document.getElementById( 'showBottom' ),
+				showLeftPush = document.getElementById( 'showLeftPush' ),*/
+				showRightPush = document.getElementById( 'showRightPush' ),
+				body = document.body;
+
+			/*showLeft.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeft' );
+			}; 
+			showRight.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( menuRight, 'cbp-spmenu-open' );
+				disableOther( 'showRight' );
+			};
+			/*showTop.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( menuTop, 'cbp-spmenu-open' );
+				disableOther( 'showTop' );
+			};
+			showBottom.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( menuBottom, 'cbp-spmenu-open' );
+				disableOther( 'showBottom' );
+			};
+			showLeftPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toright' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeftPush' );
+			}; */
+			showRightPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toleft' );
+				classie.toggle( menuRight, 'cbp-spmenu-open' );
+				disableOther( 'showRightPush' );
+			}; 
+
+			function disableOther( button ) {
+				/*if( button !== 'showLeft' ) {
+					classie.toggle( showLeft, 'disabled' );
+				} 
+				if( button !== 'showRight' ) {
+					classie.toggle( showRight, 'disabled' );
+				}
+				/*if( button !== 'showTop' ) {
+					classie.toggle( showTop, 'disabled' );
+				}
+				if( button !== 'showBottom' ) {
+					classie.toggle( showBottom, 'disabled' );
+				}
+				if( button !== 'showLeftPush' ) {
+					classie.toggle( showLeftPush, 'disabled' );
+				} */
+				if( button !== 'showRightPush' ) {
+					classie.toggle( showRightPush, 'disabled' );
+				}
+			}
+		</script>		
+
+	</body>
+</html>
