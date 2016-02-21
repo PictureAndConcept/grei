@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js">
 		</script>
@@ -33,11 +34,30 @@
 				<nav>	
 				</nav>
 					<div class="menuIcon">
-					<i class="fa fa-bars"> </i>
+						<button id="showRightPush" class="fa fa-bars"> 
+
+					</button>
+
+
+					<!-- <i class="fa fa-bars"> </i> -->
 				</div>
 				
 			</div>
 		</header>
+
+		<body class="cbp-spmenu-push">
+
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+			<h3>Menu</h3>
+
+			<a href="#">Celery seakale</a>
+			<a href="#">Dulse daikon</a>
+			<a href="#">Zucchini garlic</a>
+			<a href="#">Catsear azuki bean</a>
+			<a href="#">Dandelion bunya</a>
+			<a href="#">Rutabaga</a>
+		</nav>
+
 
 		
 
@@ -100,7 +120,77 @@
 
 		<!-------------------- JS -------------------->
 
+<script type="text/javascript" src="js/index.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/classie.js"></script>
 
+<script>
+			var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+				/*menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+				menuTop = document.getElementById( 'cbp-spmenu-s3' ),
+				menuBottom = document.getElementById( 'cbp-spmenu-s4' ),
+				showLeft = document.getElementById( 'showLeft' ),
+				showRight = document.getElementById( 'showRight' ),
+				showTop = document.getElementById( 'showTop' ),
+				showBottom = document.getElementById( 'showBottom' ),
+				showLeftPush = document.getElementById( 'showLeftPush' ),*/
+				showRightPush = document.getElementById( 'showRightPush' ),
+				body = document.body;
+
+			/*showLeft.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeft' );
+			}; 
+			showRight.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( menuRight, 'cbp-spmenu-open' );
+				disableOther( 'showRight' );
+			};
+			/*showTop.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( menuTop, 'cbp-spmenu-open' );
+				disableOther( 'showTop' );
+			};
+			showBottom.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( menuBottom, 'cbp-spmenu-open' );
+				disableOther( 'showBottom' );
+			};
+			showLeftPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toright' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeftPush' );
+			}; */
+			showRightPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toleft' );
+				classie.toggle( menuRight, 'cbp-spmenu-open' );
+				disableOther( 'showRightPush' );
+			}; 
+
+			function disableOther( button ) {
+				/*if( button !== 'showLeft' ) {
+					classie.toggle( showLeft, 'disabled' );
+				} 
+				if( button !== 'showRight' ) {
+					classie.toggle( showRight, 'disabled' );
+				}
+				/*if( button !== 'showTop' ) {
+					classie.toggle( showTop, 'disabled' );
+				}
+				if( button !== 'showBottom' ) {
+					classie.toggle( showBottom, 'disabled' );
+				}
+				if( button !== 'showLeftPush' ) {
+					classie.toggle( showLeftPush, 'disabled' );
+				} */
+				if( button !== 'showRightPush' ) {
+					classie.toggle( showRightPush, 'disabled' );
+				}
+			}
+		</script>		
 
 
 	</body>

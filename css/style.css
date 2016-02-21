@@ -74,7 +74,7 @@ p {
 
 /* Center the container */
 .container {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
   background-color: #efece4;
   text-align: center;
@@ -90,23 +90,20 @@ p {
   background-size:80%;
   background-color: #efece4;
   margin: 0 auto;
-  
-
 }
 
-}
 
 .container2 {
   width: 50%;
-  padding: 70px 35px;
-  
+  padding: 10px 35px;
+  margin-top: 20px;
   background-color: #efece4;
   float: left;
 }
 
 .container2image {
   width: 50%;
-  height: 500px;
+  height: 700px;
   padding: 10px 35px;
   background: url(../images/home.png) no-repeat top center #131e27;
   padding-top: 32px;
@@ -258,6 +255,7 @@ header nav ul li a {
 
 
 #pageIntro {
+  max-width: 960px;
   height: auto;
   padding-top: 32px;
   background: #efece4;
@@ -265,6 +263,14 @@ header nav ul li a {
   margin: 0 auto;
   padding-bottom: 20px;
 }
+
+#homeIntro {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #efece4;
+  text-align: center;
+}
+
 
 #pageIntro p {
   margin-bottom: 35px;
